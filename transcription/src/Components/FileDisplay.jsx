@@ -12,7 +12,7 @@ function FileDisplay({handleAudioReset ,file,audioStrem}) {
 
             <div className='flex flex-col text-left mx-auto '>
                 <h3 className='  font-semibold'>Name:</h3>
-                <p>{file.name}</p>
+                <p>{file ? file?.name : 'Custom audio'} </p>
             </div>
            
             <div className='flex justify-between items-center gap-4'>

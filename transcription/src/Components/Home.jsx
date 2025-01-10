@@ -3,7 +3,7 @@ import '../index.css'
 import { useState, useEffect, useRef } from 'react'
 
 
-function Home({ setAudioStream, setFile }) {
+function Home({ setAudioStrem, setFile }) {
 
     const [recordingStatus, setRecordingStatus] = useState('inactive')
     const [audioChunks, setAudioChunks] = useState([])
@@ -70,7 +70,7 @@ function Home({ setAudioStream, setFile }) {
     
         mediaReacorder.current.onstop = () => {
             const audioBlob = new Blob(audioChunks, { type: mimeType });
-            setAudioStream(audioBlob);
+            setAudioStrem(audioBlob);
             setAudioChunks([]);
             setDuration(0);
             
